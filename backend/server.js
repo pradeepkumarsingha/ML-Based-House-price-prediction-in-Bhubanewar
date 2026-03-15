@@ -11,4 +11,4 @@ app.use(express.json());
 app.use('/api/houses', predictRoutes);
 
 const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => console.log(`Node server running on port ${PORT}`));
+app.listen(PORT, () => console.log("Node server running "));
