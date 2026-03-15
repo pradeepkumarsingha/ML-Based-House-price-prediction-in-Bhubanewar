@@ -1,11 +1,13 @@
 const axios = require("axios");
 
+ML_SERVICE_URL="https://ml-based-house-price-prediction-in-enz5.onrender.com/"
+
 exports.getHousePrediction = async (req, res) => {
   try {
     const { location, area_sqft, bhk, bathroom, parking, furnishing, price_per_sqft } = req.body;
 
     // Send data to Flask ML API
-    const mlResponse = await axios.post(process.env.ML_SERVICE_URL, {
+    const mlResponse = await axios.post(ML_SERVICE_URL, {
       location: location,
       area_sqft: area_sqft,
       bhk: bhk,
