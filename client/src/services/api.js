@@ -1,8 +1,7 @@
-import axios from 'axios';
+import axios from "axios";
 
-// const API = axios.create({
-//     baseURL: import.meta.env.VITE_API_URL
-// });
-const API="https://ml-based-house-price-prediction-in-k84h.onrender.com/"
+const API = axios.create({
+  baseURL: "https://ml-based-house-price-prediction-in-k84h.onrender.com"
+});
 
-export const getPrediction = (data) => API.post('/houses/predict', data);
+export const getPrediction = (data) => API.post("/houses/predict", data);
