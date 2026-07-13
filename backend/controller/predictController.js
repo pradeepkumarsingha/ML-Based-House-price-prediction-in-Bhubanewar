@@ -1,6 +1,5 @@
 const axios = require("axios");
-
-ML_SERVICE_URL="https://ml-based-house-price-prediction-in-enz5.onrender.com/"
+const ML_SERVICE_URL = process.env.ML_SERVICE_URL || "http://localhost:5000/predict";
 
 exports.getHousePrediction = async (req, res) => {
   try {
